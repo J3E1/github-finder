@@ -38,20 +38,21 @@ const Navbar = ({ title }) => {
 				</div>
 				<div className='flex-1 px-2 mx-2 '>
 					<div className='flex justify-end items-center '>
-						<Link to='/' className='btn btn-ghost btn-sm rounded-btn'>
+						{/* <Link to='/' className='btn btn-ghost btn-sm rounded-btn'>
 							Home
 						</Link>
 						<Link to='/about' className='btn btn-ghost btn-sm rounded-btn'>
 							About
-						</Link>
+						</Link> */}
 						<select
 							className='select select-ghost select-sm ml-4 rounded-md'
 							data-choose-theme>
 							<option disabled value=''>
 								Pick a theme
 							</option>
-							{themeValues.map(theme => (
+							{themeValues.map((theme, index) => (
 								<option
+									key={index}
 									value={theme}
 									defaultValue={theme === 'dark' ? true : false}>
 									{theme.charAt(0).toUpperCase() + theme.slice(1)}
